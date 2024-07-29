@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Notebook</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}">
+            </div>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/question">Q&A</a></li> 
+                <li><a href="/subject">Subject</a></li>
+                <li><a href="/aboutus">About</a></li>   
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+        <br><br><br><br><br><br>
+        <div class="Note">
+            <div class="about_img">
+            <img src="{{ url_for('static', filename='images/about.jpg') }}">
+            </div>
+            <div class="note_tag">
+                <h1>NOTEBOOK</h1>
+                <p>Welcome to Online Notebook, your digital platform for collaborative learning and knowledge sharing! 
+                    We believe in the power of collective intelligence, and our platform is designed to foster a community 
+                    where students and lecturers can come together to enhance their educational experience.</p>
+                <h3>Our Subjects</h3>
+                <ul>
+                    <li><a href="#">WT</a></li>
+                    <li><a href="#">SPA</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

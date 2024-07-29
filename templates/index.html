@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Notebook</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        
+        <div class="wrapper">
+            <div class="logo"><span>Online </span>NoteBook</div>
+            <ul class="menu">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About</a></li> 
+                <li><a href="/subject">Subject</a></li>
+                <li><a href="/question">Q&A</a></li>    
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+        <span class="welcome">WELCOME {{user}}</span>
+    </header>
+    <section>
+        <div class="main">
+            <div class="main_tag">
+                <h1>WELCOME TO <BR><span>ONLINE NOTEBOOK</span></h1> 
+                <p>
+                    
+                    The "Online Notebook" is a web platform designed to facilitate collaborative learning and knowledge sharing among students and lecturers. The core feature of the website is a query box where students can post subject-related questions, inviting their peers to share their insights. If no responses are received within two weeks, the lecturer has the option to provide an answer.
+                    
+                    Additionally, the platform allows users to upload and share subject notes, fostering a collaborative environment for studying and understanding various perspectives on specific topics. The website requires users to sign up and log in, with separate interfaces for both students and lecturers, ensuring a secure and personalized experience.
+                    
+                    Overall, the Online Notebook aims to enhance the educational experience by promoting engagement, collaboration, and the exchange of knowledge within a user-friendly online community.</p>
+                <a href="/aboutus" class="main_btn">Learn More</a>
+            </div>
+            <div class="main_img">
+                <img src="{{ url_for('static', filename='images/homeside.jpeg') }}">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

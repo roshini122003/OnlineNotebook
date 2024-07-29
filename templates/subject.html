@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query and Answer Box</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='subject.css') }}">
+</head> 
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo"><span>Online </span>NoteBook</div>
+            <ul class="menu">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About</a></li> 
+                <li><a href="/subject">Subject</a></li>
+                <li><a href="/question">Q&A</a></li>    
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="subjects">
+        <ul>
+        {%for subject in subjects%}
+            <li><a href="/file/{{subject}}">{{subject}}</a></li>
+        {%endfor%} 
+        </ul>
+    </div>
+    <div class="choosing">
+        <form action="submit_file" method="post" enctype="multipart/form-data">
+            <input type="file" name="notes" value="upload notes" />
+            <select name="subject">
+                {%for subject in subjects%}
+                <option value="{{subject}}">{{subject}}</option>
+                {%endfor%}
+            </select>
+            <input type="text" name="upload_type" placeholder="enter type of upload"/>
+            <input type="submit"/>
+        </form>
+    </div>
+</body>
+</html>
